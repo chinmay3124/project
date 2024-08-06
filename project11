@@ -1,0 +1,56 @@
+
+package project11;
+import java. util. Scanner;
+public class amt {
+
+	public static void main(String[] args) {
+		
+		int balance = 100000,withdraw,deposit;
+		Scanner S = new Scanner(System.in);
+		while(true) {
+			System.out.println("ATM");
+			
+			System.out.println("option 1 withdraw amount");
+			System.out.println("option 2 Deposit");
+			System.out.println("option 3 Check blanace");
+			System.out.println("option 4 exit");
+			System.out.println("Choose the option to proceed");
+			
+			int option = S.nextInt();
+			switch(option)
+			{
+			case 1:
+				System.out.println("Enter the amount to be withdraw = ");
+			     withdraw = S.nextInt();
+			     if(balance >= withdraw) {
+			    	 balance = balance - withdraw;
+			    	 System.out.println("Please collect the cash");
+			    	 
+			     }else {
+			    	 System.out.println("Insufficient Balance");
+			    	 
+			     }
+			     System.out.println("");
+			     break;
+			case 2:
+				System.out.println("Enter the Deposit the amount = ");
+				deposit = S.nextInt();
+			    balance = balance + deposit;
+			    System.out.println("Amount has been successfully depsited");
+			    break;
+			    
+			case 3:
+			    System.out.println("Balance = " + balance);
+			    System.out.print("");
+			    break;
+			    
+			case 4:
+				System.exit(0);
+			    		 
+		}
+			
+				
+	
+}
+}
+}
